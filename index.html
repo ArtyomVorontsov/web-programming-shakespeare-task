@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSI Shakespeare Web Page Task</title>
+    <meta name="description" content="To be, or not to be: that is the question - Read the classic soliloquy from Shakespeare's Hamlet.">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Victorian Newspaper Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Playfair+Display+SC:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Matter.js for 2D Physics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="physics.js" defer></script>
+</head>
+<body>
+    <div class="newspaper-page">
+        
+        <header class="masthead">
+            <div class="masthead-left">
+                <img src="shakespeare.jpg" alt="William Shakespeare" class="engraving-portrait">
+                <p>W. SHAKESPEARE</p>
+                <p class="founder-text">author</p>
+            </div>
+            <div class="masthead-center">
+                <h2 class="est-text">Est. 1564</h2>
+                <h1 class="main-title">THE TRAGEDY OF<br><span class="huge-text">HAMLET</span></h1>
+                <div class="seal">
+                    <span>PRINTED IN THE</span><br>
+                    <strong>GLOBE THEATRE</strong><br>
+                    <span>LONDON</span>
+                </div>
+            </div>
+            <div class="masthead-right">
+                <img src="shakespeare.jpg" alt="William Shakespeare" class="engraving-portrait" style="transform: scaleX(-1);">
+                <p>PRINCE AMLETH</p>
+                <p class="founder-text">inspiration</p>
+            </div>
+        </header>
+
+        <div class="ticker-bar">
+            <span class="ticker-box">ACT<br>III</span>
+            <span class="ticker-divider">LDN</span>
+            <span class="ticker-main">THE GLOBE THEATRE REPERTORY</span>
+            <span class="ticker-divider">LDN</span>
+            <span class="ticker-box">SCENE<br>I</span>
+        </div>
+
+        <main class="newspaper-content">
+            
+            <aside class="col-left">
+                <h3 class="col-heading">HISTORY</h3>
+                <div class="ornament-box">
+                    <i class="fa-solid fa-skull"></i>
+                </div>
+                <p class="body-text drop-cap-small">
+                    Herein lies the soliloquy that shall surely entice, engross, and shock you and your fellows!
+                </p>
+                <p class="body-text">
+                    There is something to be found for all, be it occult adventures, mysterious crimes, domestic disputes! Our exciting tales are short enough for those of short attention spans, yet thrilling enough to keep one turning pages!
+                </p>
+
+                <div class="share-section">
+                    <h4>SPREAD THE WORD</h4>
+                    <a href="#" class="share-btn"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="share-btn"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    <a href="#" class="share-btn"><i class="fa-brands fa-tumblr"></i> Tumblr</a>
+                </div>
+            </aside>
+            
+            <article class="col-center">
+                <h2 class="section-title">THE SOLILOQUY</h2>
+                <h3 class="section-subtitle">FOR THE DISTINGUISHED READER<br><span class="or-text">or</span><br>THE PARTICULARLY WEALTHY DUNDER-HEAD</h3>
+                
+                <button id="gravity-btn" class="danger-btn"><i class="fa-solid fa-triangle-exclamation"></i> DONT PRESS</button>
+
+                <h4 class="poem-title">TO BE, OR NOT TO BE</h4>
+                <div class="poem-text">
+                    <p>
+                        To be, or not to be: that is the question:<br>
+                        Whether ’tis nobler in the mind to suffer<br>
+                        The slings and arrows of outrageous fortune,<br>
+                        Or to take arms against a sea of troubles,<br>
+                        And by opposing end them? To die: to sleep;<br>
+                        No more; and by a sleep to say we end<br>
+                        The heart-ache and the thousand natural shocks<br>
+                        That flesh is heir to, ’tis a consummation<br>
+                        Devoutly to be wish’d. To die, to sleep;<br>
+                        To sleep: perchance to dream: ay, there’s the rub;<br>
+                        For in that sleep of death what dreams may come<br>
+                        When we have shuffled off this mortal coil,<br>
+                        Must give us pause: there’s the respect<br>
+                        That makes calamity of so long life;<br>
+                        For who would bear the whips and scorns of time,<br>
+                        The oppressor’s wrong, the proud man’s contumely,<br>
+                        The pangs of despised love, the law’s delay,<br>
+                        The insolence of office and the spurns<br>
+                        That patient merit of the unworthy takes,<br>
+                        When he himself might his quietus make<br>
+                        With a bare bodkin? who would fardels bear,<br>
+                        To grunt and sweat under a weary life,<br>
+                        But that the dread of something after death,<br>
+                        The undiscover’d country from whose bourn<br>
+                        No traveller returns, puzzles the will<br>
+                        And makes us rather bear those ills we have<br>
+                        Than fly to others that we know not of?<br>
+                        Thus conscience does make cowards of us all;<br>
+                        And thus the native hue of resolution<br>
+                        Is sicklied o’er with the pale cast of thought,<br>
+                        And enterprises of great pith and moment<br>
+                        With this regard their currents turn awry,<br>
+                        And lose the name of action.—Soft you now!<br>
+                        The fair Ophelia! Nymph, in thy orisons<br>
+                        Be all my sins remember’d.
+                    </p>
+                </div>
+            </article>
+
+            <aside class="col-right">
+                <h3 class="col-heading">ACTIONS<br>DO! DO! DO!</h3>
+                <p class="body-text">
+                    You may perform our fine and striking actions at any time. Please visit our cozy storefront and peruse our wide selection!
+                </p>
+                
+                <div class="action-buttons">
+                    <a href="#" class="action-link"><i class="fa-solid fa-print"></i> View Print Mode</a>
+                    <a href="#" class="action-link"><i class="fa-solid fa-code"></i> Copy Embed Code</a>
+                    <a href="#" class="action-link"><i class="fa-solid fa-book-bookmark"></i> Add to Anthology</a>
+                </div>
+                
+                <h3 class="col-heading" style="margin-top: 30px;">FEATURED ITEM</h3>
+                <div class="featured-item">
+                    <img src="shakespeare.jpg" alt="Featured Item" class="engraving-portrait" style="border-radius: 0; width: 100%;">
+                    <p><strong>SHAKESPEARE'S QUIETUS</strong><br>A BARE BODKIN</p>
+                </div>
+            </aside>
+            
+        </main>
+    </div>
+</body>
+</html>
